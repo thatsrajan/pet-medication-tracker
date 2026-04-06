@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pet Medication Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <section class="hero card">
+      <div>
+        <p class="eyebrow">Local-first MVP</p>
+        <h1>Track pet meds without double-dosing</h1>
+        <p>Add pets, store medication instructions, and log each dose locally in your browser.</p>
+      </div>
+      <button id="load-demo" class="ghost">Load demo pets</button>
+    </section>
+
+    <section class="grid two-up">
+      <article class="card">
+        <h2>Add pet</h2>
+        <form id="pet-form" class="stack">
+          <label>Name<input name="name" required placeholder="Milo" /></label>
+          <label>Species<input name="species" required placeholder="Cat" /></label>
+          <label>Medication<input name="medication" required placeholder="Prednisolone" /></label>
+          <label>Dose<input name="dose" required placeholder="1 tablet" /></label>
+          <label>Schedule<input name="schedule" required placeholder="Every 12 hours" /></label>
+          <label>Notes<textarea name="notes" rows="3" placeholder="Give with food"></textarea></label>
+          <button type="submit">Save pet plan</button>
+        </form>
+      </article>
+
+      <article class="card">
+        <h2>Today</h2>
+        <div id="summary" class="summary"></div>
+        <div id="pets" class="stack"></div>
+      </article>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
